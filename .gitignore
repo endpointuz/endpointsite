@@ -4,5 +4,4 @@ node_modules
 npm-debug.log
 build
 public
-client/assets/img
 image-endpoint.tar
