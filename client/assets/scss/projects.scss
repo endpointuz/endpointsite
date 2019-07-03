@@ -1,0 +1,11 @@
+.projects {
+  padding-top: 280px;
+  padding-bottom: 200px;
+  @media (max-width: 767px) {
+    padding-top: 130px;
+  }
+
+  &-header {
+    margin-bottom: 100px;
+  }
+}

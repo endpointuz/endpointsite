@@ -1,0 +1,16 @@
+.title-1 {
+  font-size: 60px;
+  color: #00001E;
+  line-height: 70px;
+  @media (max-width: 767px) {
+    font-size: 45px;
+    line-height: 55px;
+  }
+  @media (max-width: 576px) {
+    font-size: 38px;
+    line-height: 48px;
+  }
+  @media (max-width: 378px) {
+    line-height: 40px;
+  }
+}

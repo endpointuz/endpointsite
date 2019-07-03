@@ -1,0 +1,25 @@
+.partners {
+  padding-top: 140px;
+  padding-bottom: 50px;
+  &-row {
+    margin-bottom: 22px;
+  }
+  &-logo {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    img {
+      width: 100%;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      &:hover {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+      }
+    }
+  }
+}

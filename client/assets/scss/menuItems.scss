@@ -1,0 +1,35 @@
+.menu-list {
+  list-style-type: none;
+  text-align: center;
+  @media (min-width: 992px) {
+    text-align: left;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+  }
+  @media (min-width: 1200px) {
+    text-align: left;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    height: 100%;
+  }
+  &-item {
+    margin: 0;
+    a {
+      transition: color .3s .1s;
+    }
+    @media (min-width: 992px) {
+      position: relative;
+      margin-right: 51px;
+    }
+    .dark {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.contacts {
+  padding-top: 280px;
+  padding-bottom: 40px;
+  @media (max-width: 767px) {
+    padding-top: 130px;
+  }
+
+  &-main {
+    padding-bottom: 240px;
+    .map {
+      width: 100%;
+      height: 460px;
+      -webkit-box-shadow: 0 10px 40px rgba(30, 38, 109, 0.12);
+      -moz-box-shadow: 0 10px 40px rgba(30, 38, 109, 0.12);
+      box-shadow: 0 10px 40px rgba(30, 38, 109, 0.12);
+    }
+
+    &-label {
+      color: $grey;
+      opacity: .4;
+      font-size: 18px;
+      line-height: 22px;
+    }
+    &-link {
+      color: $textBlack;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 50px;
+      text-decoration: underline;
+      &:hover {
+        color: $orange;
+        text-decoration: none;
+      }
+      @media (max-width: 576px) {
+        font-size: 28px;
+      }
+      &.social {
+        color: $textBlack;
+        font-size: 24px;
+        line-height: 40px;
+        font-weight: 400;
+        text-decoration: none;
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+    &-text {
+      color: $textBlack;
+      font-size: 24px;
+      line-height: 40px;
+      width: 60%;
+    }
+    &-list {
+      display: flex;
+      list-style-type: none;
+      width: 70%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}

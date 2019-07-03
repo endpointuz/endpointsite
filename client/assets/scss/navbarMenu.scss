@@ -1,0 +1,202 @@
+.navigator {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  background-color: $blue;
+  @media (max-width: 992px) {
+    overflow: scroll;
+  }
+  &-container {
+    height: 100vh;
+    padding-top: 240px;
+    padding-bottom: 80px;
+    @media (max-width: 1343px) {
+      padding-top: 190px;
+    }
+    @media (max-width: 1024px) {
+      padding-top: 150px;
+    }
+    @media (max-width: 768px) {
+      padding-top: 150px;
+    }
+    @media (max-width: 378px) {
+      padding-top: 110px;
+    }
+  }
+  &.visible {
+    transform: translate(0, 0);
+  }
+
+  // DOWNLOAD PRESENTATION
+
+  &-presentation {
+    &-link {
+      color: $orange;
+      font-size: 18px;
+      text-decoration: none;
+      &:hover {
+        color: $orange;
+      }
+      img {
+        margin-right: 15px;
+        margin-top: -4px;
+        vertical-align: center;
+      }
+    }
+  }
+
+  // MENU LIST
+  &-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &-item {
+      a {
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+    &-link {
+      position: relative;
+      z-index: 3;
+      display: block;
+      line-height: 70px;
+      font-size: 60px;
+      font-weight: 700;
+      color: $white;
+      opacity: .4;
+      text-decoration: none;
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
+      transform: translate(0, 0);
+      transition: all .3s;
+      @media (max-width: 1023px) {
+        font-size: 50px;
+        line-height: 60px;
+      }
+      @media (max-width: 768px) {
+        font-size: 35px;
+        line-height: 45px;
+      }
+      &:hover {
+        text-decoration: none;
+        color: $white;
+        opacity: 1;
+        -webkit-transform: translate(44px, 0);
+        -moz-transform: translate(44px, 0);
+        -ms-transform: translate(44px, 0);
+        -o-transform: translate(44px, 0);
+        transform: translate(44px, 0);
+        .navigator-list-text {
+          z-index: 1;
+          width: 100%;
+        }
+        .navigator-list-num {
+          width: 100%;
+          -webkit-transform: translateX(-40px);
+          -moz-transform: translateX(-40px);
+          -ms-transform: translateX(-40px);
+          -o-transform: translateX(-40px);
+          transform: translateX(-40px);
+        }
+      }
+    }
+    &-text {
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 0;
+      font-size: 60px;
+      font-weight: 700;
+      color: $orange;
+      opacity: 1;
+      text-decoration: none;
+      transition: all .3s;
+      white-space: nowrap;
+      @media (max-width: 1023px) {
+        font-size: 50px;
+        line-height: 60px;
+      }
+      @media (max-width: 768px) {
+        font-size: 35px;
+        line-height: 45px;
+      }
+    }
+    &-num {
+      position: absolute;
+      top: 22%;
+      left: 0;
+      z-index: 1;
+      width: 0;
+      overflow: hidden;
+      font-size: 14px;
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+      transform: translateX(0);
+      color: $orange;
+      transition: all .3s;
+    }
+  }
+
+//  NAVIGATOR FOOTER
+  &-footer {
+    &-label {
+      font-size: 14px;
+      color: $white;
+      opacity: .4;
+    }
+    &-phone a, &-email a {
+      font-size: 24px;
+      font-weight: 700;
+      color: $white;
+      &:hover {
+        color: $orange;
+      }
+      @media (max-width: 1343px) {
+        font-size: 20px;
+      }
+      @media (max-width: 378px) {
+        font-size: 16px;
+      }
+    }
+    &-address {
+      font-size: 16px;
+      color: $white;
+      padding-right: 60px;
+
+    }
+    &-social {
+      &-list {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 1343px) {
+          flex-direction: column;
+        }
+        @media (max-width: 1023px) {
+          flex-direction: row;
+        }
+      }
+      &-link {
+        color: $white;
+        text-decoration: none;
+        font-size: 16px;
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.single-portfolio {
+
+  &-header {
+    padding-top: 160px;
+    background-color: $bgColorLight;
+    &-info {
+      display: flex;
+      padding-top: 64px;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+  &-text {
+    color: $grey;
+    font-size: 24px;
+    font-family: Lora, serif;
+    font-weight: 500;
+    min-height: 220px;
+    margin-top: 40px;
+  }
+  &-date, &-tags {
+    color: $grey;
+    font-size: 16px;
+  }
+  &-link {
+    margin-bottom: 52px;
+  }
+  &-link a {
+    color: $orange;
+    font-size: 24px;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+      color: $orange;
+    }
+  }
+  &-tags {
+    margin-top: auto;
+    padding-bottom: 60px;
+    .single-portfolio-tag {
+      margin-right: 25px;
+    }
+  }
+
+  &-content {
+    padding-top: 66px;
+    &-text {
+      color: $grey;
+      font-size: 24px;
+      font-family: Lora, serif;
+      line-height: 40px;
+      padding-bottom: 30px;
+    }
+    &-image {
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+    &-subtitle {
+      font-size: 24px;
+      color: $grey;
+      font-weight: 700;
+    }
+  }
+}

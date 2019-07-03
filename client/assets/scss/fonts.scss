@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?utgh3o');
+  src:  url('../fonts/icomoon.eot?utgh3o#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon.ttf?utgh3o') format('truetype'),
+  url('../fonts/icomoon.woff?utgh3o') format('woff'),
+  url('../fonts/icomoon.svg?utgh3o#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow:before {
+  content: "\e900";
+  color: inherit;
+}
+
+.icon-backend_icon:before {
+  content: "\e901";
+  color: #ffb15b;
+}
+.icon-frotend_icon:before {
+  content: "\e902";
+  color: #ffb15b;
+}
+.icon-graph_design_icon:before {
+  content: "\e903";
+  color: #ffb15b;
+}
+.icon-Link:before {
+  content: "\e904";
+  color: #ffb15b;
+}
+.icon-mobile_icon:before {
+  content: "\e905";
+  color: #ffb15b;
+}
+.icon-support_icon:before {
+  content: "\e906";
+  color: #ffb15b;
+}
+.icon-Sync:before {
+  content: "\e907";
+  color: #ffb15b;
+}
+.icon-ui_ux_icon:before {
+  content: "\e908";
+  color: #ffb15b;
+}

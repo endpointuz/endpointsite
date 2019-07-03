@@ -1,0 +1,70 @@
+.menu-toggler {
+  display: block;
+  width: 40px;
+  margin-left: auto;
+  .burger {
+    width: 40px;
+    height: 16px;
+    position: relative;
+    transition: height .1s;
+    &.dark {
+      .burger-top {
+        background: $white;
+      }
+
+      .burger-bottom {
+        background: $white;
+      }
+    }
+    &-top {
+      position: absolute;
+      top: 0%;
+      width: 100%;
+      height: 3px;
+      background: $black;
+      transition: all .1s, background 2s;
+    }
+
+    &-bottom {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 50%;
+      height: 3px;
+      background: $black;
+      transition: all .1s, background 2s;
+    }
+  }
+  &:hover {
+    .burger {
+      &-bottom {
+        width: 100%;
+      }
+    }
+  }
+  &.open {
+    .burger {
+      width: 40px;
+      height: 40px;
+      &-top {
+        top: 20px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        background: $white;
+      }
+      &-bottom {
+        top: 20px;
+        width: 100%;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        background: $white;
+      }
+    }
+  }
+}

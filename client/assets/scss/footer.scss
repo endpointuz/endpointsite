@@ -1,0 +1,29 @@
+.footer {
+  background-color: $blue;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  &-credit {
+    justify-content: space-between;
+    margin-top: 67px;
+    &-label {
+      color: $white;
+      opacity: .4;
+      font-size: 16px;
+    }
+    &-conf {
+      text-align: right;
+      @media (max-width: 575px) {
+        text-align: left;
+      }
+      a {
+        font-size: 16px;
+        color: $white;
+        opacity: .4;
+        text-decoration: none;
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+}

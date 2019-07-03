@@ -1,0 +1,52 @@
+.projects-card {
+  &.gradient-1 {
+    background-color: rgb(143,108,222);
+    background: -moz-linear-gradient(45deg,  rgba(143,108,222,1) 0%, rgba(125,147,243,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  rgba(143,108,222,1) 0%,rgba(125,147,243,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  rgba(143,108,222,1) 0%,rgba(125,147,243,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f6cde', endColorstr='#7d93f3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+  &.gradient-2 {
+    background-color: $blue;
+  }
+  &-wrapper {
+    padding: 45px 0 80px 60px;
+    color: $white;
+  }
+  &-description {
+    color: $white;
+    font-family: Lora, serif;
+    font-size: 16px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+  &-background {
+    background-repeat: no-repeat;
+    background-position: bottom -130px right -50px;
+    @media (max-width: 1343px) {
+      background-position: bottom -170px right -150px;
+    }
+    @media (max-width: 1023px) {
+      background-position: bottom -270px right -250px;
+    }
+    @media (max-width: 575px) {
+      background: none !important;
+    }
+  }
+
+  &-footer {
+
+    &-label {
+      color: $white;
+      opacity: .8;
+    }
+    &-link a {
+      color: $orange;
+      text-decoration: underline;
+      &:hover {
+        color: $orange;
+        text-decoration: none;
+      }
+    }
+  }
+}
