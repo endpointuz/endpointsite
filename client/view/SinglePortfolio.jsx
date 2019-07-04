@@ -31,6 +31,7 @@ class SinglePortfolio extends React.Component {
           <RequestContainer
             title="Понравился проект?"
             description="Не стесняйся поделись проектом с друзьями или напиши нам"
+            hasShare={true}
           />
         </section>
         <footer className="footer">

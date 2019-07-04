@@ -5,6 +5,15 @@ import orientContentThird from '../client/assets/img/orient-screen-2.png';
 import advnextPic from '../client/assets/img/advnext-header.png';
 import advnextContentFirst from '../client/assets/img/adv-screen-1.jpg';
 import advnextContentSecond from '../client/assets/img/adv-screen-2.jpg';
+import vcloudsHeader from '../client/assets/img/vclouds-header.png';
+import vcloudsFirst from '../client/assets/img/vclouds-image-0.jpg';
+import vcloudsSecond from '../client/assets/img/vclouds-image-1.jpg';
+import vcloudsThird from '../client/assets/img/vclouds-image-2.png';
+import vcloudsFour from '../client/assets/img/vclouds-image-3.png';
+import vcloudsFifth from '../client/assets/img/vclouds-image-4.jpg';
+import loftHeader from '../client/assets/img/loft-header.png';
+import loftFirst from '../client/assets/img/loft-image-0.jpg';
+import loftSecond from '../client/assets/img/loft-image-1.png';
 
 export default [
   {
@@ -107,6 +116,105 @@ export default [
         type: 'image',
         fluid: true,
         content: advnextContentSecond,
+      },
+    ],
+  },
+  {
+    id: 'vclouds',
+    header: {
+      title: 'Редизайн сайта vClouds.uz',
+      description: 'Редизайн сайта крупнейшего на рынке Узбекистана провайдера облачных услуг. Полностью переработали структуру сайта, разработали шаблон информационных станиц, страниц услуг с тарифами.',
+      date: '01/2019',
+      link: {
+        to: 'https://vclouds.uz',
+        text: 'vclouds.uz',
+      },
+      tags: ['UI/UX', 'Website'],
+      picture: vcloudsHeader,
+    },
+    body: [
+      {
+        id: 1,
+        type: 'title',
+        content: 'Клиент',
+      },
+      {
+        id: 2,
+        type: 'text',
+        content: 'vClouds – провайдер облачных услуг, который с 2016 года предоставляет на рынке Узбекистана инновационные решения по оптимизации IT-инфраструктуры, с дальнейшим развитием и сокращением ИТ издержек у клиента.',
+      },
+      {
+        id: 3,
+        type: 'image',
+        fluid: true,
+        content: vcloudsFirst,
+      },
+      {
+        id: 4,
+        type: 'text',
+        content: 'Мы сделали сайт с максимально простым и удобным интерфейсом. Аккуратно и красиво, с минимальным количеством кликов можно заказать любую интересующуюся услуги и выбрать нужный тариф',
+      },
+      {
+        id: 5,
+        type: 'image',
+        fluid: false,
+        content: vcloudsSecond,
+      },
+      {
+        id: 6,
+        type: 'image',
+        fluid: false,
+        content: vcloudsThird,
+      },
+      {
+        id: 7,
+        type: 'image',
+        fluid: false,
+        content: vcloudsFour,
+      },
+      {
+        id: 8,
+        type: 'image',
+        fluid: false,
+        content: vcloudsFifth,
+      },
+    ],
+  },
+  {
+    id: 'loftroomstudio',
+    header: {
+      title: 'Loft Room Studio',
+      description: 'Дизайн сайта одной из лучших интерьерных фотостудии Ташкента «Loft Room Studio»',
+      date: '06/2019',
+      link: {
+        to: 'https://loftroom.uz',
+        text: 'loftroom.uz',
+      },
+      tags: ['UI/UX', 'Website'],
+      picture: loftHeader,
+    },
+    body: [
+      {
+        id: 1,
+        type: 'title',
+        content: 'Клиент',
+      },
+      {
+        id: 2,
+        type: 'text',
+        content: 'Loft Room Studio — новая интерьерная фотостудия импульсного и естественного света в Ташкенте. В студии два очень красивых зала – «Циклорама» и «Loft» темный. В студии имеется идеально белая циклорама 7 метров шириной 5 метров глубиной 4,2 метра высота, удобная и яркая гримерная, бумажные фоны с электронным подъёмником (серый, черный, желтый), 2 прибора 600дж, 2 прибора 300дж, 2 прибора 150дж, 2 стрипбокса, октобокс, софтбокс, портретная тарелка, чашки, тубосы, гелевые фильтры.',
+      },
+      {
+        id: 3,
+        type: 'image',
+        fluid: false,
+        content: loftFirst,
+      },
+      {
+        id: 4,
+        type: 'image',
+        fluid: false,
+        content: loftSecond,
       },
     ],
   },

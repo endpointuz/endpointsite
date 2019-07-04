@@ -1,12 +1,14 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import { Footer } from '../components/blocks';
-import { NavbarContainer, PortfolioContainer, RequestContainer } from '../containers';
+import { NavbarContainer } from '../containers';
 import { TitleOne } from '../components/simple';
 import logobankImage from '../assets/img/logobank-project.png';
 import knowledgeImage from '../assets/img/knowledge-project.png';
 import ProjectsCard from '../components/simple/ProjectsCard';
+import frontTitle from '../../utils/frontRoutes';
+
 
 class Projects extends React.Component {
   state = {
@@ -31,6 +33,19 @@ class Projects extends React.Component {
   render() {
     return (
       <div className={`wrapper ${this.state.visible ? '' : 'load'}`}>
+        <Helmet>
+          <title>{frontTitle.projectspage.title}</title>
+          <meta name="description" content={frontTitle.projectspage.description} />
+          <meta name="keywords" content={frontTitle.projectspage.keywords} />
+
+          <meta property="og:type" content="article" />
+          <meta property="og:site_name" content="Endpoint.uz" />
+          <meta property="og:title" content={frontTitle.projectspage.og.title} />
+          <meta property="og:description" content={frontTitle.projectspage.og.description} />
+          <meta property="og:url" content={frontTitle.projectspage.og.url} />
+          <meta property="og:image" content={frontTitle.projectspage.og.image} />
+          <meta property="og:locale" content="ru_RU" />
+        </Helmet>
         <NavbarContainer />
         <section className="projects">
           <Container>

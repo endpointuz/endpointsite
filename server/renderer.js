@@ -3,9 +3,11 @@ import { renderToString } from 'react-dom/server';
 import { StaticRouter as Router } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import { Provider } from 'react-redux';
+import Helmet from 'react-helmet';
 import '@babel/polyfill';
 import routes from '../utils/routes.js';
 import { ScrollToTop } from '../client/components/util';
+import seoTitles from '../utils/frontRoutes';
 
 const renderer = (req, store) => {
   const context = {};
@@ -13,19 +15,25 @@ const renderer = (req, store) => {
 
   const content = renderToString(
     <Provider store={store}>
-      <Router context={context} location={req.path} query={req.query}>
+      <Router context={context} location={{ pathname: req.path, state: { url: `${req.protocol}://${req.get('host')}${req.originalUrl}` } }} query={req.query}>
         <ScrollToTop>
           {renderRoutes(routes)}
         </ScrollToTop>
       </Router>
     </Provider>,
   );
+
+  const helmet = Helmet.renderStatic();
   const jsx = `
       <!DOCTYPE html>
-      <html>
+      <html prefix="og: http://ogp.me/ns#">
       <head>
+          ${helmet.title.toString()}
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          <meta http-equiv="content-language" content="ru" />
+          <meta name="robots" content="index,follow" />
           <link rel="icon" sizes="16x16" href="/img/favicon-16x16.png">
           <link rel="icon" sizes="32x32" href="/img/favicon-32x32.png">
           <link rel="icon" href="/img/favicon.ico">

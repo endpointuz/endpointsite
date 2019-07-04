@@ -1,6 +1,7 @@
 import advNextPic from '../client/assets/img/ADVnext.jpg';
 import vCloudPic from '../client/assets/img/vcloud.png';
 import orientPic from '../client/assets/img/orientmotors.jpg';
+import loftPic from '../client/assets/img/loft-portfolio.jpg';
 
 export default [
   {
@@ -14,7 +15,7 @@ export default [
   },
   {
     name: 'Vclouds',
-    link: '/',
+    link: '/portfolio/vclouds',
     id: 2,
     date: '01/2019',
     tags: ['UI/UX', 'Website'],
@@ -22,12 +23,12 @@ export default [
     darkTheme: false,
   },
   {
-    name: 'ADVnext опросник',
-    link: '/portfolio/advnext',
+    name: 'Loft Room Studio',
+    link: '/portfolio/loftroomstudio',
     id: 3,
-    date: '01/2019',
-    tags: ['MobileApp', 'Frontend', 'Backend', 'UI/UX'],
-    picture: advNextPic,
+    date: '06/2019',
+    tags: ['UI/UX', 'Website'],
+    picture: loftPic,
     darkTheme: true,
   },
   {

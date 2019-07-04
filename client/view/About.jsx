@@ -1,6 +1,9 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Footer, AboutImage, AboutService, AboutTeam, Partners } from '../components/blocks';
+import { Helmet } from 'react-helmet';
+import {
+  Footer, AboutImage, AboutService, AboutTeam, Partners,
+} from '../components/blocks';
 import { NavbarContainer } from '../containers';
 import { TitleOne } from '../components/simple';
 
@@ -22,6 +25,7 @@ import swiftIcon from '../assets/img/swift.svg';
 import javascriptIcon from '../assets/img/javascript.svg';
 import reactIcon from '../assets/img/react.svg';
 import vuejsIcon from '../assets/img/vuejs.svg';
+import frontTitle from '../../utils/frontRoutes';
 
 
 const images = [
@@ -77,6 +81,19 @@ class About extends React.Component {
   render() {
     return (
       <div className={`wrapper ${this.state.visible ? '' : 'load'}`}>
+        <Helmet>
+          <title>{frontTitle.aboutpage.title}</title>
+          <meta name="description" content={frontTitle.aboutpage.description} />
+          <meta name="keywords" content={frontTitle.aboutpage.keywords} />
+
+          <meta property="og:type" content="article" />
+          <meta property="og:site_name" content="Endpoint.uz" />
+          <meta property="og:title" content={frontTitle.aboutpage.og.title} />
+          <meta property="og:description" content={frontTitle.aboutpage.og.description} />
+          <meta property="og:url" content={frontTitle.aboutpage.og.url} />
+          <meta property="og:image" content={frontTitle.aboutpage.og.image} />
+          <meta property="og:locale" content="ru_RU" />
+        </Helmet>
         <NavbarContainer />
         <section className="about">
           <Container>

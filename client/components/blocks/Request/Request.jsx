@@ -2,7 +2,9 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { TitleOne, Button } from '../../simple';
 
-const Request = ({ toggleRequestVisibility, title, description }) => (
+const Request = ({
+  toggleRequestVisibility, title, description, hasShare, location,
+}) => (
   <Container className="request-container">
     <Row className="request-row">
       <Col lg={10} className="request-col">
@@ -25,6 +27,26 @@ const Request = ({ toggleRequestVisibility, title, description }) => (
           }}
         />
       </Col>
+      {
+        hasShare
+          ? <Col lg={6}>
+              <div className="share-buttons">
+                <a target="_blank"
+                   rel="noopener noreferrer"
+                   href={`https://www.facebook.com/sharer/sharer.php?u=${typeof window !== 'undefined' ? window.location.href : location.url}`}
+                   className="share-buttons-item">
+                  Поделиться в Facebook
+                </a>
+                <a target="_blank"
+                   rel="noopener noreferrer"
+                   href={`tg://msg_url?url=${typeof window !== 'undefined' ? window.location.href : location.url}`}
+                   className="share-buttons-item">
+                  Поделиться в Telegram
+                </a>
+              </div>
+            </Col>
+          : null
+      }
     </Row>
   </Container>
 );

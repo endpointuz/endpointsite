@@ -1,9 +1,11 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import {
   Footer,
   NotFoundContent,
 } from '../components/blocks';
 import { NavbarContainer } from '../containers';
+import frontTitle from '../../utils/frontRoutes';
 
 class NotFound extends React.Component {
   state = {
@@ -28,6 +30,11 @@ class NotFound extends React.Component {
   render() {
     return (
       <div className={`wrapper notfound-wrapper ${this.state.visible ? '' : 'load'}`}>
+        <Helmet>
+          <title>{frontTitle.notfound.title}</title>
+          <meta name="description" content={frontTitle.notfound.description} />
+          <meta name="keywords" content={frontTitle.notfound.keywords} />
+        </Helmet>
         <NavbarContainer
           darkTheme={true}
         />

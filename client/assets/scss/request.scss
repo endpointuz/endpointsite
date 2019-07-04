@@ -15,4 +15,17 @@
     margin-top: 20px;
     margin-bottom: 60px;
   }
+  .share-buttons {
+    margin-top: 40px;
+    &-item {
+      font-size: 18px;
+      color: $orange;
+      text-decoration: none;
+      margin-right: 30px;
+      &:hover {
+        color: $orange;
+        text-decoration: underline;
+      }
+    }
+  }
 }

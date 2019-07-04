@@ -1,17 +1,17 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import {
   Header,
   Services,
   Partners,
-  Request,
   Footer,
 } from '../components/blocks';
 import { PortfolioContainer, NavbarContainer, RequestContainer } from '../containers';
 import { TitleOne } from '../components/simple';
 
-import arrowIcon from '../assets/img/arrow.svg';
+import frontTitle from '../../utils/frontRoutes';
 
 class Homepage extends React.Component {
   state = {
@@ -36,6 +36,19 @@ class Homepage extends React.Component {
   render() {
     return (
       <div className={`wrapper ${this.state.visible ? '' : 'load'}`}>
+        <Helmet>
+          <title>{frontTitle.homepage.title}</title>
+          <meta name="description" content={frontTitle.homepage.description} />
+          <meta name="keywords" content={frontTitle.homepage.keywords} />
+
+          <meta property="og:type" content="article" />
+          <meta property="og:site_name" content="Endpoint.uz" />
+          <meta property="og:title" content={frontTitle.homepage.og.title} />
+          <meta property="og:description" content={frontTitle.homepage.og.description} />
+          <meta property="og:url" content={frontTitle.homepage.og.url} />
+          <meta property="og:image" content={frontTitle.homepage.og.image} />
+          <meta property="og:locale" content="ru_RU" />
+        </Helmet>
         <NavbarContainer
           darkTheme={false}
         />
