@@ -39,7 +39,7 @@ class Contacts extends React.Component {
           <meta property="og:title" content={frontTitle.contactspage.og.title} />
           <meta property="og:description" content={frontTitle.contactspage.og.description} />
           <meta property="og:url" content={frontTitle.contactspage.og.url} />
-          <meta property="og:image" content={frontTitle.contactspage.og.image} />
+          <meta property="og:image" content={`https://endpoint.uz${frontTitle.contactspage.og.image}`} />
           <meta property="og:locale" content="ru_RU" />
         </Helmet>
         <NavbarContainer />

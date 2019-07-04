@@ -91,7 +91,7 @@ class About extends React.Component {
           <meta property="og:title" content={frontTitle.aboutpage.og.title} />
           <meta property="og:description" content={frontTitle.aboutpage.og.description} />
           <meta property="og:url" content={frontTitle.aboutpage.og.url} />
-          <meta property="og:image" content={frontTitle.aboutpage.og.image} />
+          <meta property="og:image" content={`https://endpoint.uz${frontTitle.aboutpage.og.image}`} />
           <meta property="og:locale" content="ru_RU" />
         </Helmet>
         <NavbarContainer />
