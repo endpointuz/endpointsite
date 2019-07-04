@@ -26,7 +26,7 @@ const renderer = (req, store) => {
   const helmet = Helmet.renderStatic();
   const jsx = `
       <!DOCTYPE html>
-      <html prefix="og: http://ogp.me/ns#">
+      <html prefix="og: http://ogp.me/ns#" xmlns="w3.org/1999/xhtml">
       <head>
           ${helmet.title.toString()}
           <meta charset="utf-8">

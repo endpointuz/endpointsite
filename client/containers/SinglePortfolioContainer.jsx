@@ -37,7 +37,7 @@ class SinglePortfolioContainer extends React.Component {
           <meta property="og:title" content={frontTitle[id].og.title} />
           <meta property="og:description" content={frontTitle[id].og.description} />
           <meta property="og:url" content={frontTitle[id].og.url} />
-          <meta property="og:image" content={frontTitle[id].og.image} />
+          <meta property="og:image" content={`https://endpoint.uz${frontTitle[id].og.image}`} />
           <meta property="og:locale" content="ru_RU" />
         </Helmet>
         <header className="single-portfolio-header">
