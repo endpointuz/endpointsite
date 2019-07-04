@@ -161,7 +161,7 @@ app.post('/send-request', [
 
 app.get('/robots.txt', (req, res) => {
   res.type('text/plain');
-  res.send('User-agent: *\nDisallow: /');
+  res.send('User-agent: *\nAllow: /');
 });
 
 app.get('*', (req, res) => {
