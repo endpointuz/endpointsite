@@ -23,6 +23,7 @@
       }
       &.active {
         color: $orange;
+        font-weight: 700;
         text-decoration: underline;
       }
     }
@@ -74,6 +75,9 @@
     justify-content: space-between;
     padding: 60px 60px 40px 60px;
     overflow: hidden;
+    @media (max-width: 576px) {
+      padding: 30px 40px 40px 30px;
+    }
     &:hover {
       .portfolio-project-bg {
         transform: scale(1.1);

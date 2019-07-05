@@ -14,7 +14,7 @@
     }
     @media (max-width: 465px) {
       margin-bottom: 30px;
-      height: 470px;
+      height: auto;
     }
     &.first {
       align-self: flex-start;
@@ -24,7 +24,7 @@
       }
       @media (max-width: 465px) {
         margin-bottom: 30px;
-        height: 470px;
+        height: auto;
       }
     }
     &.second {
@@ -40,6 +40,9 @@
     padding: 60px 35px 0 40px;
     height: 100%;
     background-color: $white;
+    @media (max-width: 465px) {
+      padding: 40px 30px 30px 30px;
+    }
     &-header {
       display: flex;
       flex-direction: column;

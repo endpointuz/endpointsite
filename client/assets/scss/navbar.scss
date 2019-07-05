@@ -10,6 +10,9 @@
     @media (max-width: 1024px) {
       transform: translate(0, -20%);
     }
+    @media (max-width: 476px) {
+      transform: translate(0, 0);
+    }
     &.onTop {
       transform: translate(0, 0);
     }
@@ -48,6 +51,8 @@
     @media (max-width: 378px) {
       padding-top: 25px;
       padding-bottom: 25px;
+      padding-left: 8px;
+      padding-right: 20px;
     }
   }
   &-right {

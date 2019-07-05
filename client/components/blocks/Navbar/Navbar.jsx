@@ -121,7 +121,7 @@ const Navbar = ({
       <div className={`navbar-pos${visibleMenu ? ' bg' : ''}`}>
         <Container fluid={true} className="navbar-container">
           <Row className="align-items-center">
-            <Col xs={4} md={4} lg={3} xl={2}>
+            <Col xs={8} md={4} lg={3} xl={2}>
               <PoseGroup>
                 {
                   !visibleMenu && !darkTheme && !requestVisibility
@@ -156,7 +156,7 @@ const Navbar = ({
                   )
               }
             </Col>
-            <Col xs={2} md={1} lg={1} xl={1} className="ml-lg-auto">
+            <Col xs={4} md={1} lg={1} xl={1} className="ml-lg-auto">
               <a className={`menu-toggler${visibleMenu || requestVisibility ? ' open' : ''}${darkTheme ? ' dark' : ''}`} onClick={handleToggle}>
                 <Burger
                   className={`${darkTheme ? ' dark' : ''}`}

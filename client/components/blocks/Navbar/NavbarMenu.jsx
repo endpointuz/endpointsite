@@ -41,10 +41,10 @@ const NavigatorContainer = ({ isVisible }) => {
         <Col xl={12}>
           <NavbarMenuList />
         </Col>
-        <Col xl={12} className="d-none d-lg-block">
+        <Col xl={12}>
           <p className="navigator-presentation">
             <a href={presentation} download className="navigator-presentation-link">
-              <img src={arrowIcon} alt="Стрелка направо" /> Скачать презентацию в pdf - 8.1 Мб
+              <img src={arrowIcon} alt="Стрелка направо" /> Скачать презентацию в pdf - 3.8 Мб
             </a>
           </p>
         </Col>
@@ -68,7 +68,7 @@ const NavigatorContainer = ({ isVisible }) => {
               <Col md={6} lg={3} xl={3} className="d-none d-sm-block">
                 <NavbarMenuFooterInfo label="Приходить">
                   <p className="navigator-footer-address">
-                    г. Ташкент, Мирзо-Улугбекскийр-н, ул. Аккурган 1 пр-д, д. 60
+                    г. Ташкент, Мирзо-Улугбекский р-н, ул. Аккурган 1 пр-д, д. 60
                   </p>
                 </NavbarMenuFooterInfo>
               </Col>
@@ -86,7 +86,7 @@ const NavigatorContainer = ({ isVisible }) => {
                       </a>
                     </li>
                     <li className="navigator-footer-social-item">
-                      <a target="_blank" rel="noopener noreferrer" href="https://t.me/igakim" className="navigator-footer-social-link">
+                      <a target="_blank" rel="noopener noreferrer" href="https://t.me/endpointuz" className="navigator-footer-social-link">
                         Telegram
                       </a>
                     </li>

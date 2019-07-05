@@ -37,7 +37,7 @@ const SinglePortfolioHeader = (
 ) => (
   <Container>
     <Row>
-      <Col xl={6}>
+      <Col md={6} lg={6} xl={6}>
         <div className="single-portfolio-header-info">
           <TitleOne
             text={title}
@@ -48,9 +48,9 @@ const SinglePortfolioHeader = (
           {renderTags(tags)}
         </div>
       </Col>
-      <Col xl={6}>
+      <Col md={6} lg={6} xl={6} className="align-self-center">
         <div className="single-portfolio-image">
-          <img src={picture} alt="картинка проекта" />
+          <img src={picture} alt="картинка проекта" className="single-portfolio-image-item" />
         </div>
       </Col>
     </Row>

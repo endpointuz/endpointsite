@@ -6,7 +6,7 @@ const AboutService = (
   {
     title,
     children,
-  }
+  },
 ) => (
   <section className="about-page-service">
     <Container>

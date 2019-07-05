@@ -12,6 +12,9 @@
   &-wrapper {
     padding: 45px 0 80px 60px;
     color: $white;
+    @media (max-width: 576px) {
+      padding: 45px 0 45px 30px;
+    }
   }
   &-description {
     color: $white;

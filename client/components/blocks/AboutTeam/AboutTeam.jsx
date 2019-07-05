@@ -4,32 +4,44 @@ import { TitleOne } from '../../simple';
 import AboutTeamCard from './AboutTeamCard';
 
 import igorPhoto from '../../../assets/img/igor-photo.png';
-import ulugbekPhoto from '../../../assets/img/ulugbek-photo.png';
-import aleksanderPhoto from '../../../assets/img/aleksander-photo.png';
+import ulugbekPhoto from '../../../assets/img/ulugbek-photo.jpg';
+import aleksanderPhoto from '../../../assets/img/aleksander-photo.jpg';
+import kseniyaPhoto from '../../../assets/img/kseniya-photo.jpg';
 
-const teamData = [
-  {
-    id: 1,
-    name: 'Игорь',
-    description: 'ceo & co-founder',
-    photo: igorPhoto,
-    position: 'flex-start',
-  },
-  {
-    id: 2,
-    name: 'Улугбек',
-    description: 'cio & co-founder',
-    photo: ulugbekPhoto,
-    position: 'center',
-  },
-  {
-    id: 3,
-    name: 'Александр',
-    description: 'cto & co-founder',
-    photo: aleksanderPhoto,
-    position: 'flex-end',
-  },
-];
+const teamData = {
+  firstRow: [
+    {
+      id: 1,
+      name: 'Игорь',
+      description: 'ceo & co-founder',
+      photo: igorPhoto,
+      position: 'flex-start',
+    },
+    {
+      id: 2,
+      name: 'Улугбек',
+      description: 'cio & co-founder',
+      photo: ulugbekPhoto,
+      position: 'center',
+    },
+    {
+      id: 3,
+      name: 'Александр',
+      description: 'cto & co-founder',
+      photo: aleksanderPhoto,
+      position: 'flex-end',
+    },
+  ],
+  secondRow: [
+    {
+      id: 4,
+      name: 'Ксения',
+      description: 'Back-end developer',
+      photo: kseniyaPhoto,
+      position: 'flex-end',
+    },
+  ],
+};
 
 const AboutTeam = () => (
   <section className="team">
@@ -43,7 +55,7 @@ const AboutTeam = () => (
         </Col>
       </Row>
       <Row className="team-row">
-        {teamData.map(member => (
+        {teamData.firstRow.map(member => (
           <Col md={4} lg={4} key={member.id} style={{ alignSelf: member.position }} className="team-col">
             <AboutTeamCard
               {...member}
@@ -52,7 +64,7 @@ const AboutTeam = () => (
         ))}
       </Row>
       <Row className="team-row">
-        {teamData.map(member => (
+        {teamData.secondRow.map(member => (
           <Col md={4} lg={4} key={member.id} style={{ alignSelf: member.position }} className="team-col">
             <AboutTeamCard
               {...member}

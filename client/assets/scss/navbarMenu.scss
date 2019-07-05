@@ -35,9 +35,15 @@
 
   &-presentation {
     &-link {
+      display: inline-block;
       color: $orange;
       font-size: 18px;
       text-decoration: none;
+      margin: auto;
+      @media (max-width: 576px) {
+        font-size: 14px;
+        margin: 20px 0;
+      }
       &:hover {
         color: $orange;
       }

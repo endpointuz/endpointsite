@@ -44,7 +44,7 @@ const ContactsMain = () => (
                 </a>
               </li>
               <li className="contacts-main-item">
-                <a target="_blank" rel="noopener noreferrer" href="https://t.me/igakim" className="contacts-main-link social">
+                <a target="_blank" rel="noopener noreferrer" href="https://t.me/endpointuz" className="contacts-main-link social">
                   Telegram
                 </a>
               </li>

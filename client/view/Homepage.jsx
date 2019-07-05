@@ -93,7 +93,7 @@ class Homepage extends React.Component {
         <section className="request">
           <RequestContainer
             title="Есть интересные проекты?"
-            description="Оставь заявку и наш специалист свяжетсяс тобой, чтоб обсудить проект."
+            description="Оставь заявку и наш специалист свяжется с тобой, чтоб обсудить проект."
           />
         </section>
         <footer className="footer">

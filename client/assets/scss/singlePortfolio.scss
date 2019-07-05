@@ -10,6 +10,15 @@
       height: 100%;
     }
   }
+  &-image {
+
+    &-item {
+      width: 100%;
+      @media (max-width: 576px) {
+        width: 100%;
+      }
+    }
+  }
   &-text {
     color: $grey;
     font-size: 24px;

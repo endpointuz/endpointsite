@@ -26,7 +26,7 @@ const Footer = ({ hasCredits = true }) => (
             <Col md={6} lg={3} xl={3} className="d-none d-sm-block d-footer">
               <NavbarMenuFooterInfo label="Приходить">
                 <p className="navigator-footer-address">
-                  г. Ташкент, Мирзо-Улугбекскийр-н, ул. Аккурган 1 пр-д, д. 60
+                  г. Ташкент, Мирзо-Улугбекский р-н, ул. Аккурган 1 пр-д, д. 60
                 </p>
               </NavbarMenuFooterInfo>
             </Col>
@@ -44,7 +44,7 @@ const Footer = ({ hasCredits = true }) => (
                     </a>
                   </li>
                   <li className="navigator-footer-social-item">
-                    <a target="_blank" rel="noopener noreferrer" href="https://t.me/igakim" className="navigator-footer-social-link">
+                    <a target="_blank" rel="noopener noreferrer" href="https://t.me/endpointuz" className="navigator-footer-social-link">
                       Telegram
                     </a>
                   </li>
