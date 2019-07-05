@@ -29,6 +29,7 @@ const renderer = (req, store) => {
       <html xmlns="w3.org/1999/xhtml">
       <head>
           ${helmet.title.toString()}
+          ${helmet.meta.toString()}
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
