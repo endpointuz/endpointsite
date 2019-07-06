@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { TitleOne } from '../../simple';
 import AboutTeamCard from './AboutTeamCard';
 
-import igorPhoto from '../../../assets/img/igor-photo.png';
+import igorPhoto from '../../../assets/img/igor-photo.jpg';
 import ulugbekPhoto from '../../../assets/img/ulugbek-photo.jpg';
 import aleksanderPhoto from '../../../assets/img/aleksander-photo.jpg';
 import kseniyaPhoto from '../../../assets/img/kseniya-photo.jpg';
