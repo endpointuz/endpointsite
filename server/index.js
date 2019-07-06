@@ -1,10 +1,11 @@
 import express from 'express';
-import axios from 'axios';
+// import axios from 'axios';
 import { matchRoutes } from 'react-router-config';
 import bodyParser from 'body-parser';
-import { check, validationResult } from 'express-validator/check';
+// import { check, validationResult } from 'express-validator/check';
 import cors from 'cors';
-import nodemailer from 'nodemailer';
+import sm from 'sitemap';
+// import nodemailer from 'nodemailer';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebookF, faInstagram, faTelegramPlane } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -64,53 +65,69 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 app.use(express.json());
 app.use(cors());
-const jsonParser = bodyParser.json();
+// const jsonParser = bodyParser.json();
 // const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-const sendMail = async (data) => {
-  const testAccount = await nodemailer.createTestAccount();
+const sitemap = sm.createSitemap({
+  hostname: 'https://endpoint.uz',
+  cacheTime: 600000,
+  urls: [
+    { url: '/', changefreq: 'monthly', priority: 1.0 },
+    { url: '/about/', changefreq: 'monthly', priority: 1.0 },
+    { url: '/projects/', changefreq: 'monthly', priority: 1.0 },
+    { url: '/portfolio/', changefreq: 'monthly', priority: 1.0 },
+    { url: '/contacts/', changefreq: 'monthly', priority: 1.0 },
+    { url: '/portfolio/advnext/', changefreq: 'monthly', priority: 0.8 },
+    { url: '/portfolio/vclouds/', changefreq: 'monthly', priority: 0.8 },
+    { url: '/portfolio/loftroomstudio/', changefreq: 'monthly', priority: 0.8 },
+    { url: '/portfolio/orientmotors/', changefreq: 'monthly', priority: 0.8 },
+  ],
+});
 
-  // create reusable transporter object using the default SMTP transport
-  const transporter = nodemailer.createTransport({
-    host: process.env.NODEMAILER_SERVICE,
-    port: 465,
-    secure: true, // true for 465, false for other ports
-    auth: {
-      user: process.env.NODEMAILER_USER, // generated ethereal user
-      pass: process.env.NODEMAILER_PASS, // generated ethereal password
-    },
-  });
-
-  // send mail with defined transport object
-  const info = await transporter.sendMail({
-    from: 'info@endpoint.uz', // sender address
-    to: 'info@endpoint.uz', // list of receivers
-    subject: 'Заявка', // Subject line
-    html: `
-      <b>Компания:</b> ${data.company} <br />
-      <b>Имя:</b> ${data.name} <br />
-      <b>Телефон:</b> ${data.phone} <br />
-      <b>Эл. почта:</b> ${data.email} <br />
-      <b>Комментарий к заявке:</b> ${data.comment} <br />
-      <b>Описание проекта:</b> ${data.description} <br />
-      <b>Ориентировочный бюджет:</b> ${data.small ? '5-10,' : ''} ${data.mid ? '10-100, ' : ''} ${data.big ? '100+,' : ''} ${data.unknown ? 'Не определено' : ''}<br />
-      <b>Проект:</b> 
-      ${data.mobile ? 'Mobile App,' : ''}
-      ${data.site ? 'Website,' : ''}
-      ${data.service ? 'Service,' : ''}
-      ${data.eCommerce ? 'e-commerce,' : ''}
-      ${data.other ? 'Other,' : ''}
-      <br />
-    `, // html body
-  });
-
-  // console.log("Message sent: %s", info.messageId);
-  // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-
-  // Preview only available when sending through an Ethereal account
-  // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-  // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-};
+// const sendMail = async (data) => {
+//   const testAccount = await nodemailer.createTestAccount();
+//
+//   // create reusable transporter object using the default SMTP transport
+//   const transporter = nodemailer.createTransport({
+//     host: process.env.NODEMAILER_SERVICE,
+//     port: 465,
+//     secure: true, // true for 465, false for other ports
+//     auth: {
+//       user: process.env.NODEMAILER_USER, // generated ethereal user
+//       pass: process.env.NODEMAILER_PASS, // generated ethereal password
+//     },
+//   });
+//
+//   // send mail with defined transport object
+//   const info = await transporter.sendMail({
+//     from: 'info@endpoint.uz', // sender address
+//     to: 'info@endpoint.uz', // list of receivers
+//     subject: 'Заявка', // Subject line
+//     html: `
+//       <b>Компания:</b> ${data.company} <br />
+//       <b>Имя:</b> ${data.name} <br />
+//       <b>Телефон:</b> ${data.phone} <br />
+//       <b>Эл. почта:</b> ${data.email} <br />
+//       <b>Комментарий к заявке:</b> ${data.comment} <br />
+//       <b>Описание проекта:</b> ${data.description} <br />
+//       <b>Ориентировочный бюджет:</b> ${data.small ? '5-10,' : ''} ${data.mid ? '10-100, ' : ''} ${data.big ? '100+,' : ''} ${data.unknown ? 'Не определено' : ''}<br />
+//       <b>Проект:</b>
+//       ${data.mobile ? 'Mobile App,' : ''}
+//       ${data.site ? 'Website,' : ''}
+//       ${data.service ? 'Service,' : ''}
+//       ${data.eCommerce ? 'e-commerce,' : ''}
+//       ${data.other ? 'Other,' : ''}
+//       <br />
+//     `, // html body
+//   });
+//
+//   // console.log("Message sent: %s", info.messageId);
+//   // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+//
+//   // Preview only available when sending through an Ethereal account
+//   // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+//   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+// };
 
 // check('name')
 //   .exists({ checkNull: true, checkFalsy: true })
@@ -123,40 +140,46 @@ const sendMail = async (data) => {
 //     .isEmail()
 //     .withMessage('Неверный формат эл.почты'),
 
-app.post('/send-request', [
-  check('name')
-    .exists({ checkNull: true, checkFalsy: true })
-    .withMessage('Имя не может быть пустым'),
-  check('phone')
-    .matches(/\+998 \(\d{2}\) \d{3}-\d{2}-\d{2}/)
-    .withMessage('Неверныйй формат телефона'),
-  check('email')
-    .isEmail()
-    .withMessage('Неверный формат эл.почты'),
-], async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(422).json({ errors: errors.array() });
-  }
-  const captcha = await axios.post('https://www.google.com/recaptcha/api/siteverify', {}, {
-    params: {
-      secret: '6Leaz6kUAAAAAMNOVZDzSRnkj5bVP1gTaPXooqGQ',
-      response: req.body.captchaToken,
-    },
-  });
+// app.post('/send-request', [
+//   check('name')
+//     .exists({ checkNull: true, checkFalsy: true })
+//     .withMessage('Имя не может быть пустым'),
+//   check('phone')
+//     .matches(/\+998 \(\d{2}\) \d{3}-\d{2}-\d{2}/)
+//     .withMessage('Неверныйй формат телефона'),
+//   check('email')
+//     .isEmail()
+//     .withMessage('Неверный формат эл.почты'),
+// ], async (req, res) => {
+//   res.setHeader('Access-Control-Allow-Origin', '*');
+//   const errors = validationResult(req);
+//   if (!errors.isEmpty()) {
+//     return res.status(422).json({ errors: errors.array() });
+//   }
+//   const captcha = await axios.post('https://www.google.com/recaptcha/api/siteverify', {}, {
+//     params: {
+//       secret: '6Leaz6kUAAAAAMNOVZDzSRnkj5bVP1gTaPXooqGQ',
+//       response: req.body.captchaToken,
+//     },
+//   });
+//
+//   if (captcha.success) {
+//     return sendMail(req.body).then(() => {
+//       res.sendStatus(200).end();
+//     }).catch((e) => {
+//       res.sendStatus(504).end(e);
+//     });
+//   }
+//
+//   return res.status(422).json(captcha.data);
+//
+//   // return null;
+// });
 
-  if (captcha.success) {
-    return sendMail(req.body).then(() => {
-      res.sendStatus(200).end();
-    }).catch((e) => {
-      res.sendStatus(504).end(e);
-    });
-  }
 
-  return res.status(422).json(captcha.data);
-
-  // return null;
+app.get('/sitemap.xml', (req, res) => {
+  res.header('Content-Type', 'application/xml');
+  res.send(sitemap.toString());
 });
 
 app.get('/robots.txt', (req, res) => {
