@@ -1,6 +1,5 @@
-const host = 'https://192.168.1.241:8999';
-// const host = 'http://192.168.1.241:8025';
-// 192.168.1.241:8025/api/requests/
+const host = 'https://endpoint.uz:8999';
+
 const api = 'api';
 
 export default {
