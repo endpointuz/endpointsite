@@ -5,6 +5,6 @@ services:
       context: .
       dockerfile: deploy/Dockerfile
     restart: always
-    command: "npm run start"
+    command: "node build/server.js"
     ports:
       - "3000:3000"
