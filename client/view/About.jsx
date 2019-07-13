@@ -9,12 +9,12 @@ import { TitleOne } from '../components/simple';
 
 import websiteTexts from '../websiteContent';
 
-import teamWork1 from '../assets/img/team-work-1.png';
-import teamWork2 from '../assets/img/team-work-2.png';
-import teamWork3 from '../assets/img/team-work-3.png';
-import teamWork4 from '../assets/img/team-work-4.png';
-import teamWork5 from '../assets/img/team-work-5.png';
-import teamWork6 from '../assets/img/team-work-6.png';
+import teamWork1 from '../assets/img/team-work-1-min.jpg';
+import teamWork2 from '../assets/img/team-work-2-min.jpg';
+import teamWork3 from '../assets/img/team-work-3-min.jpg';
+import teamWork4 from '../assets/img/team-work-4-min.jpg';
+import teamWork5 from '../assets/img/team-work-5-min.jpg';
+import teamWork6 from '../assets/img/team-work-6-min.jpg';
 import pythonIcon from '../assets/img/python.svg';
 import phpIcon from '../assets/img/php.png';
 import nodejsIcon from '../assets/img/nodejs.svg';

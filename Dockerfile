@@ -2,9 +2,7 @@ FROM node:10.16-alpine
 
 WORKDIR /usr/src
 
-COPY ./ /usr/src
-
-RUN npm install
-RUN npm run build
+COPY ./build /usr/src
+COPY ./public /usr/src
 
 CMD ["node", "./build/server.js"]

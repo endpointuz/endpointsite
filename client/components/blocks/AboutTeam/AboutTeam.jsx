@@ -7,6 +7,10 @@ import igorPhoto from '../../../assets/img/igor-photo.jpg';
 import ulugbekPhoto from '../../../assets/img/ulugbek-photo.jpg';
 import aleksanderPhoto from '../../../assets/img/aleksander-photo.jpg';
 import kseniyaPhoto from '../../../assets/img/kseniya-photo.jpg';
+import rustamPhoto from '../../../assets/img/rustam-min.jpg';
+import leraPhoto from '../../../assets/img/lera-min.jpg';
+import bekPhoto from '../../../assets/img/beka-min.jpg';
+import arslanPhoto from '../../../assets/img/ars-min.jpg';
 
 const teamData = {
   firstRow: [
@@ -35,10 +39,40 @@ const teamData = {
   secondRow: [
     {
       id: 4,
+      name: 'Рустам',
+      description: 'Head of Backend',
+      photo: rustamPhoto,
+      position: 'flex-start',
+    },
+    {
+      id: 5,
       name: 'Ксения',
       description: 'Back-end developer',
       photo: kseniyaPhoto,
+      position: 'center',
+    },
+    {
+      id: 6,
+      name: 'Валерия',
+      description: 'Back-end developer',
+      photo: leraPhoto,
       position: 'flex-end',
+    },
+  ],
+  thirdRow: [
+    {
+      id: 7,
+      name: 'Арслан',
+      description: 'Head of Android',
+      photo: arslanPhoto,
+      position: 'flex-start',
+    },
+    {
+      id: 8,
+      name: 'Бекзод',
+      description: 'Стажер',
+      photo: bekPhoto,
+      position: 'center',
     },
   ],
 };
@@ -65,6 +99,15 @@ const AboutTeam = () => (
       </Row>
       <Row className="team-row">
         {teamData.secondRow.map(member => (
+          <Col md={4} lg={4} key={member.id} style={{ alignSelf: member.position }} className="team-col">
+            <AboutTeamCard
+              {...member}
+            />
+          </Col>
+        ))}
+      </Row>
+      <Row className="team-row">
+        {teamData.thirdRow.map(member => (
           <Col md={4} lg={4} key={member.id} style={{ alignSelf: member.position }} className="team-col">
             <AboutTeamCard
               {...member}
