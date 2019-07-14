@@ -7,7 +7,6 @@ import Helmet from 'react-helmet';
 import '@babel/polyfill';
 import routes from '../utils/routes.js';
 import { ScrollToTop } from '../client/components/util';
-import seoTitles from '../utils/frontRoutes';
 
 const renderer = (req, store) => {
   const context = {};

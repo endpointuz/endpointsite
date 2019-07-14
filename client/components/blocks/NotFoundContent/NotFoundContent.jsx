@@ -24,7 +24,7 @@ const NotFoundContent = () => (
             </Link>
           </p>
           <p className="notfound-link-container">
-            <Link to="/">
+            <Link to="/portfolio">
               <img src={arrowIcon} alt="" />
               Смотреть портфолио
             </Link>
