@@ -3,16 +3,18 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import { TitleOne } from '../../simple';
 
-import logoPicOne from '../../../assets/img/logos-01.png';
-import logoPicTwo from '../../../assets/img/logos-02.png';
-import logoPicThree from '../../../assets/img/logos-03.png';
-import logoPicFour from '../../../assets/img/logos-04.png';
+import logoPicOne from '../../../assets/img/avtoritet.svg';
+import logoPicTwo from '../../../assets/img/AWV.svg';
+import logoPicThree from '../../../assets/img/loft.png';
+import logoPicFour from '../../../assets/img/orient.svg';
+import logoPicFive from '../../../assets/img/vclouds.svg';
 
 const logos = [
   logoPicOne,
   logoPicTwo,
   logoPicThree,
   logoPicFour,
+  logoPicFive,
 ];
 
 const Partners = () => (
@@ -24,7 +26,7 @@ const Partners = () => (
         />
       </Col>
     </Row>
-    <Row>
+    <Row className="align-items-center justify-content-between">
       {logos.map((logo, index) => (
         <Col xs={4} sm={4} md={2} lg={2} key={index}>
           <div className="partners-logo">

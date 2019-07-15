@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import notFoundPic from '../../../assets/img/404.png';
+import notFoundPic from '../../../assets/img/404_endpoint.svg';
 import arrowIcon from '../../../assets/img/arrow.svg';
 
 const NotFoundContent = () => (
