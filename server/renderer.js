@@ -34,6 +34,8 @@ const renderer = (req, store) => {
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           <meta http-equiv="content-language" content="ru" />
           <meta name="robots" content="index,follow" />
+          <meta name="yandex-verification" content="aee4a05f814c4531" />
+          <meta name="google-site-verification" content="wpLGDV2n_B-wW8dHrNOABnreMWeTThS_xRA9cUv81sM" />
           <link rel="icon" sizes="16x16" href="/img/favicon-16x16.png">
           <link rel="icon" sizes="32x32" href="/img/favicon-32x32.png">
           <link rel="icon" href="/img/favicon.ico">
