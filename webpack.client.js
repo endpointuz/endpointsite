@@ -7,6 +7,7 @@ const baseConfig = require('./webpack.base.js');
 const config = {
   context: __dirname,
   entry: ['./client/index.js'],
+  devtool: '',
   output: {
     path: path.join(__dirname, 'public'),
     filename: '[name].js',

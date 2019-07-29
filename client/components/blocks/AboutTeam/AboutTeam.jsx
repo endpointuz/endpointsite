@@ -63,7 +63,7 @@ const teamData = {
     {
       id: 7,
       name: 'Арслан',
-      description: 'Head of Android',
+      description: 'Head of Mobile',
       photo: arslanPhoto,
       position: 'flex-start',
     },
