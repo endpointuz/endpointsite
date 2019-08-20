@@ -2,6 +2,7 @@ import advNextPic from '../client/assets/img/ADVnext.jpg';
 import vCloudPic from '../client/assets/img/vcloud.png';
 import orientPic from '../client/assets/img/orientmotors.jpg';
 import loftPic from '../client/assets/img/loft-portfolio.jpg';
+import promoPic from '../client/assets/img/promo-min.jpg';
 
 export default [
   {
@@ -38,6 +39,15 @@ export default [
     date: '01/2019',
     tags: ['UI/UX', 'Website'],
     picture: orientPic,
+    darkTheme: false,
+  },
+  {
+    name: 'ADVnext Promo',
+    link: '/portfolio/adv-promo',
+    id: 5,
+    date: '01/2019',
+    tags: ['MobileApp', 'Frontend', 'Backend', 'UI/UX'],
+    picture: promoPic,
     darkTheme: false,
   },
 ];

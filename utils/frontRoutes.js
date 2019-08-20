@@ -3,6 +3,7 @@ import shareAdv from '../client/assets/img/advnext-header.png';
 import shareVclouds from '../client/assets/img/vclouds-header.png';
 import shareLoft from '../client/assets/img/loft-header.png';
 import shareOrient from '../client/assets/img/orient-header.png';
+import sharePromo from '../client/assets/img/promo-main.png';
 
 export default {
   homepage: {
@@ -111,6 +112,18 @@ export default {
       description: 'Корпоративный сайт одного из лидеров по продаже импортных автомобилей в Узбекистане',
       url: 'https://endpoint.uz/portfolio/orientmotors',
       image: shareOrient,
+    },
+  },
+  'adv-promo': {
+    path: '/portfolio/adv-promo',
+    title: 'Портфолио - ADVnext Promo | Endpoint.uz',
+    description: 'Универсальное мобильное приложение для регистрации участников, выдачи призов, мониторинга проведения акций.',
+    keywords: 'разработка, сайтов, информационных систем, дизайн, ui, ux, android, react, ios, приложения',
+    og: {
+      title: 'ADVnext Promo | Endpoint.uz',
+      description: 'Универсальное мобильное приложение для регистрации участников, выдачи призов, мониторинга проведения акций.',
+      url: 'https://endpoint.uz/portfolio/adv-promo',
+      image: sharePromo,
     },
   },
   notfound: {

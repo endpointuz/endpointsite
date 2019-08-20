@@ -14,6 +14,8 @@ import vcloudsFifth from '../client/assets/img/vclouds-image-4.jpg';
 import loftHeader from '../client/assets/img/loft-header.png';
 import loftFirst from '../client/assets/img/loft-image-0.jpg';
 import loftSecond from '../client/assets/img/loft-image-1.png';
+import promoHeader from '../client/assets/img/promo-main.png';
+import promoContent from '../client/assets/img/promo-content.jpg';
 
 export default [
   {
@@ -215,6 +217,39 @@ export default [
         type: 'image',
         fluid: false,
         content: loftSecond,
+      },
+    ],
+  },
+  {
+    id: 'adv-promo',
+    header: {
+      title: 'ADVnext Promo',
+      description: 'Программа для регисраций и ведения промо-акций PRP (Promotional registration of participants). Универсальное мобильное приложение для регистрации участников, выдачи призов, мониторинга проведения акций.',
+      date: '01/2019',
+      tags: ['UI/UX', 'Website', 'Mobile APP', 'Front-end', 'Back-end'],
+      picture: promoHeader,
+    },
+    body: [
+      {
+        id: 1,
+        type: 'title',
+        content: 'Клиент',
+      },
+      {
+        id: 2,
+        type: 'text',
+        content: 'ADV Next  промо-маркетинговое агентство основано в 2018 году в Ташкенте профессионалами в области маркетинговых коммуникаций и событийного менеджмента и уже является одним из наиболее заметных участников Promo, Event отраслей, одними из клиентов которой являются такие компании как Samsung и UZBAT.',
+      },
+      {
+        id: 3,
+        type: 'text',
+        content: 'Заказчик инновационных подходов, надежный партнер, способный качественно и в срок осуществить интегрированную рекламную кампанию от идеи до реализации локального и регионального масштаба. С использованием как традиционных, так и нестандартных коммуникационных каналов.',
+      },
+      {
+        id: 4,
+        type: 'image',
+        fluid: false,
+        content: promoContent,
       },
     ],
   },
