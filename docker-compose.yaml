@@ -2,9 +2,6 @@ version: "3"
 services:
   server:
     image: node:10.16-alpine
-    build:
-      context: .
-      dockerfile: deploy/Dockerfile
     restart: always
     volumes:
       - ./build:/build
