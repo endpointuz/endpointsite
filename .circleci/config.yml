@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: node:10
-    step:
+    steps:
       - checkout
       - run: npm i
       - run: npm run build
