@@ -8,4 +8,4 @@ services:
       - ./public:/public
     command: "node /build/server.js"
     ports:
-      - "3001:3000"
+      - "127.0.0.1:3001:3000"
