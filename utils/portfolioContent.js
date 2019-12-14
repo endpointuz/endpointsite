@@ -16,6 +16,9 @@ import loftFirst from '../client/assets/img/loft-image-0.jpg';
 import loftSecond from '../client/assets/img/loft-image-1.png';
 import promoHeader from '../client/assets/img/promo-main.png';
 import promoContent from '../client/assets/img/promo-content.jpg';
+import profiHead from '../client/assets/img/profi-head.png';
+import profifirst from '../client/assets/img/profi-1.jpg';
+import profiSecond from '../client/assets/img/profi-2.jpg';
 
 export default [
   {
@@ -250,6 +253,44 @@ export default [
         type: 'image',
         fluid: false,
         content: promoContent,
+      },
+    ],
+  },
+  {
+    id: 'profi-kitchen',
+    header: {
+      title: 'PROFI KITCHEN',
+      description: 'Сайт каталог крупнейшего поставщика оборудований для ресторанов, баров, кафе и других товаров для предприятий общественного питания.',
+      date: '11/2019',
+      tags: ['UI/UX', 'Website'],
+      link: {
+        to: 'https://profikitchen.uz/',
+        text: 'profikitchen.uz',
+      },
+      picture: profiHead,
+    },
+    body: [
+      {
+        id: 1,
+        type: 'title',
+        content: 'Клиент',
+      },
+      {
+        id: 2,
+        type: 'text',
+        content: 'OOO «PROFI KITCHEN» на сегодняшний день, является одним из лидеров по поставке профессионального кухонного оборудования для кафе, баров, ресторанов, предприятий фаст-фуда. Поставка теплового, холодильного, электромеханического, посудомоечного и нейтрального оборудования для предприятий общепита',
+      },
+      {
+        id: 3,
+        type: 'image',
+        fluid: true,
+        content: profifirst,
+      },
+      {
+        id: 4,
+        type: 'image',
+        fluid: false,
+        content: profiSecond,
       },
     ],
   },

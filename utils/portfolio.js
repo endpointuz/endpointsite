@@ -3,6 +3,7 @@ import vCloudPic from '../client/assets/img/vcloud.png';
 import orientPic from '../client/assets/img/orientmotors.jpg';
 import loftPic from '../client/assets/img/loft-portfolio.jpg';
 import promoPic from '../client/assets/img/promo-min.jpg';
+import profiPic from '../client/assets/img/profi-main.png';
 
 export default [
   {
@@ -48,6 +49,15 @@ export default [
     date: '01/2019',
     tags: ['MobileApp', 'Frontend', 'Backend', 'UI/UX'],
     picture: promoPic,
+    darkTheme: false,
+  },
+  {
+    name: 'PROFI KITCHEN',
+    link: '/portfolio/profi-kitchen',
+    id: 6,
+    date: '11/2019',
+    tags: ['UI/UX', 'Website'],
+    picture: profiPic,
     darkTheme: false,
   },
 ];

@@ -4,6 +4,7 @@ import shareVclouds from '../client/assets/img/vclouds-header.png';
 import shareLoft from '../client/assets/img/loft-header.png';
 import shareOrient from '../client/assets/img/orient-header.png';
 import sharePromo from '../client/assets/img/promo-main.png';
+import shareProfi from '../client/assets/img/profi-head.png';
 
 export default {
   homepage: {
@@ -124,6 +125,18 @@ export default {
       description: 'Универсальное мобильное приложение для регистрации участников, выдачи призов, мониторинга проведения акций.',
       url: 'https://endpoint.uz/portfolio/adv-promo',
       image: sharePromo,
+    },
+  },
+  'profi-kitchen': {
+    path: '/portfolio/profi-kitchen',
+    title: 'Портфолио - PROFI KITCHEN | Endpoint.uz',
+    description: 'Сайт каталог крупнейшего поставщика оборудований для ресторанов, баров, кафе и других товаров для предприятий общественного питания.',
+    keywords: 'разработка, сайтов, информационных систем, дизайн, ui, ux, android, react, ios, приложения',
+    og: {
+      title: 'Портфолио Endpoint.uz | PROFI KITCHEN',
+      description: 'Сайт каталог крупнейшего поставщика оборудований для ресторанов, баров, кафе и других товаров для предприятий общественного питания.',
+      url: 'https://endpoint.uz/portfolio/profi-kitchen',
+      image: shareProfi,
     },
   },
   notfound: {
