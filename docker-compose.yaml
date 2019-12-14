@@ -1,10 +1,11 @@
 version: "3"
 services:
   server:
-    build:
-      context: .
-      dockerfile: deploy/Dockerfile
+    image: node:10.16-alpine
     restart: always
-    command: "node build/server.js"
+    volumes:
+      - ./build:/build
+      - ./public:/public
+    command: "node /build/server.js"
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3001:3000"
