@@ -70,7 +70,7 @@ const teamData = {
     {
       id: 8,
       name: 'Бекзод',
-      description: 'Стажер',
+      description: 'Front-end developer',
       photo: bekPhoto,
       position: 'center',
     },
